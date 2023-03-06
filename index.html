@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+      <link href="style.css" rel="stylesheet" type="text/css">
+      <meta charset="utf-8">
+      <title>House site</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+   </head>
+   <body>
+      <div id="header">
+         <main>
+            <h1>Главный контент</h1>
+            <p>Вторая строка</p>
+         </main>
+         <aside></aside>
+      </div>
+      <div class="nav">
+         <div class="c">
+            <ul class="menu-c">
+               <li><a href="#cscs">Список Гиперссылок</a></li>
+               <li><a href="#tablet">Таблица</a></li>
+               <li><a href="#forma">Форма</a></li>
+            </ul>
+         </div>
+      </div>
+      <div class="content">
+         <a id="tablet"></a>
+         <table>
+            <tr>
+               <th>Колонка 1</th>
+               <th>Колонка 2</th>
+               <th>Колонка 3</th>
+            </tr>
+            <tr>
+               <td>Ячейка 11</td>
+               <td>Ячейка 12</td>
+               <td>Ячейка 13</td>
+            </tr>
+            <tr>
+               <td colspan="2">Ячейка 21 и 22</td>
+               <td>Ячейка 23</td>
+            </tr>
+            <tr>
+               <td>Ячейка 31</td>
+               <td>Ячейка 32</td>
+               <td>Ячейка 33</td>
+            </tr>
+            <tr>
+               <td>Ячейка 41</td>
+               <td>Ячейка 42</td>
+               <td>Ячейка 43</td>
+            </tr>
+            <tr>
+               <td>Ячейка 51</td>
+               <td colspan="2"> Ячейка 52 и 53</td>
+            </tr>
+         </table>
+         <form action="/" method="POST">
+            <a id="forma"></a>
+            <br>
+            <label> Введите имя:
+            <br />
+            <input name="field-name-1" value="имя" /> </label>
+            <br>
+            <label> Текстовое поле email:
+            <br />
+            <input name="field-email" type="email" placeholder="Введите вашу почту" /> </label>
+            <br>
+            <label> Текстовое поле даты:
+            <br />
+            <input name="field-date" value="2021-09-01" type="date" /> </label>
+            <br> Пол:
+            <br />
+            <label>
+            <input type="radio" checked="checked" name="radio-group-1" value="Женский" /> Женский</label>
+            <br>
+            <label>
+            <input type="radio" name="radio-group-1" value="Мужской" /> Мужской</label>
+            <br>
+            <label>
+               Мн выбор из списка:
+               <br />
+               <select name="field-name-4[]" multiple="multiple">
+                  <option value="Бессмертие">Бессмертие</option>
+                  <option value="Полет" selected="selected">Полет</option>
+                  <option value="Прохождение сквозь стены" selected="selected">Прохождение сквозь стены</option>
+               </select>
+            </label>
+            <br> Конечности:
+            <br />
+            <label>
+            <input type="radio" checked="checked" name="radio-group-1" value="1" /> 1</label>
+            <br>
+            <label>
+            <input type="radio" name="radio-group-1" value="2" /> 2</label>
+            <br>
+            <label>
+            <input type="radio" name="radio-group-1" value="3" /> 3</label>
+            <br>
+            <label>
+            <input type="radio" name="radio-group-1" value="4" /> 4</label>
+            <br>
+            <label> Введите Биографию:
+            <br />
+            <textarea name="field-name-2">Биография</textarea>
+            </label>
+            <br>
+            <label>
+            C контрактом ознакомлен(а) 
+            <input type="checkbox" checked="checked" name="check-1" />
+            </label> <br>Кнопка отправки формы
+            <br>
+            <input type="submit" value="Отправить" /> 
+         </form>
+      </div>
+      <footer>
+         (с) Сторожева Полина 2022 
+      </footer>
+</html>
