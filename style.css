@@ -1,0 +1,148 @@
+#header {
+	flex-direction: row;
+	display: flex;
+	font-size: large;
+	color: white;
+	font-size: 30px;
+	width: 100%;
+}
+
+#header main,
+#header aside {
+	background: #a4c088;
+	margin: 10px;
+	padding: 10px;
+}
+
+#header aside {
+	flex: 1;
+	order: 1;
+	background-image: url(3.jpg);
+}
+
+#header main {
+	flex: 3;
+	order: 2;
+}
+
+.c {
+	align-items: flex-start;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+@media (max-width: 608px) {
+	.menu-c {
+		list-style: none;
+		font-size: 25px;
+		text-align: center;
+		padding-inline-start: 0px;
+	}
+
+	.menu-c li {
+		background-color: #c6d5ac;
+		padding: 0px 5px;
+	}
+
+	.content form {
+		flex: 1;
+		order: 1;
+	}
+
+	.content table {
+		flex: 1;
+		order: 2;
+		width: 100%;
+	}
+
+}
+
+@media (min-width: 1024px) {
+	#header {
+		flex-direction: row;
+	}
+
+	.menu-c {
+		width: 100%;
+		list-style: none;
+		font-size: 30px;
+		text-align: center;
+	}
+
+	.menu-c li {
+		background-color: #c6d5ac;
+		display: inline-block;
+		padding: 0px 5px;
+	}
+}
+
+.nav {
+	background-image: url(4.jpg);
+	width: 100%;
+	margin: auto;
+	display: flex;
+}
+
+.content {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	background-image: url(4.jpg);
+}
+
+.content h1 {
+	background-color: #c6d5ac;
+	align-self: center;
+	color: white;
+	padding: 20px;
+}
+
+.content form,
+table,
+ol#all {
+	border: 10px solid transparent;
+	border-image: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%)20% / 1 / 0 stretch;
+	color: white;
+	font-size: 30px;
+	background-color: #c6d5ac;
+	margin: 0 auto;
+	padding: 10px;
+	list-style-position: inside;
+	margin-top: 20px;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+}
+
+TD,
+TH,
+TR {
+	padding: 3px;
+}
+
+tr:nth-child(2n) {
+	background: #22c1c3;
+	color: #fff;
+}
+
+tr:nth-child(2n-1) {
+	background: #c6d5ac;
+	color: #fff;
+}
+
+footer {
+	margin-top: 20px;
+	display: flex;
+	justify-content: left;
+	padding: 5px;
+	background-color: #c6d5ac;
+	color: #fff;
+}
