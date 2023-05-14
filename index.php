@@ -25,7 +25,7 @@ $sup = array('t','b','c', 'p');
 
 // Проверяем ошибки.
 $errors = FALSE;
-if (empty($_POST['fio'])) {
+if (!preg_match("/^\w+[\w\s-]*$/", $_POST['fio']) || empty($_POST['fio'])) {
   print('Заполните имя.<br/>');
   $errors = TRUE;
 }
@@ -35,7 +35,7 @@ if (empty($_POST['year']) || !is_numeric($_POST['year']) || !preg_match('/^\d+$/
   $errors = TRUE;
 }
 
-if (empty($_POST['email'])) {
+if (!preg_match("/^[\w\.-]+@([\w-]+\.)+[\w-]{2,4}$/", $_POST['email']) || empty($_POST['email'])) {
   print('Заполните email.<br/>');
   $errors = TRUE;
 }
@@ -49,12 +49,14 @@ if (empty($_POST['limbs']) || !is_numeric($_POST['limbs']) || !preg_match('/^\d+
     $errors = TRUE;
 }
 
-if (empty($_POST['superpower'])) {
-    print('Заполните superpower.<br/>');
-    $errors = TRUE;
+foreach($_POST['superpower'] as $check){
+    if(array_search($check,$sup)=== false){
+        print_r('Неверный формат суперсил');
+        exit();
+    }
 }
 
-if(isset($_POST['formWheelchair']) &&
+if(!preg_match("/^[\w\.-]+@([\w-]+\.)+[\w-]{2,4}$/", $_POST['formWheelchair']) || isset($_POST['formWheelchair']) &&
     $_POST['formWheelchair'] == 'Yes')
 {
 }
