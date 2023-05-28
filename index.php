@@ -19,8 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   exit();
 }
 
-$s = array($_POST['superpower']);
-$sup = array('t','b','c', 'p');
+//$s = array($_POST['superpower']);
+//$sup = array('t','b','c', 'p');
 // Иначе, если запрос был методом POST, т.е. нужно проверить данные и сохранить их в XML-файл.
 
 // Проверяем ошибки.
@@ -120,13 +120,13 @@ try {
     $stmt = $db->prepare("INSERT INTO Sform SET id_per = ?, id_sup = ?");
     foreach ($_POST['superpower'] as $ability) {
         if ($ability=='t')
-        {$stmt -> execute([$id, 10]);}
+        {$stmt -> execute($id, 10);}
         else if ($ability=='b')
-        {$stmt -> execute([$id, 20]);}
+        {$stmt -> execute($id, 20);}
         else if ($ability=='c')
-        {$stmt -> execute([$id, 30]);}
+        {$stmt -> execute($id, 30);}
         else if ($ability=='p')
-        {$stmt -> execute([$id, 30]);}
+        {$stmt -> execute($id, 30);}
     }
 }
 catch(PDOException $e) {
@@ -172,7 +172,7 @@ header('Location: ?save=1');
 <!DOCTYPE html>
 <head>
 <meta charset="utf-8" />
-<title>Web-3</title>
+<title>Web-6</title>
 <link rel="stylesheet" href="style3.css" type="text/css"/>
 </head>
 </html>
